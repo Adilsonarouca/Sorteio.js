@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SORTEIO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto+Serif&family=Roboto:ital,wght@0,100;0,400;1,300&display=swap" rel="stylesheet">
+
+    <style>
+
+
+body{
+    background-color: aliceblue;
+}
+      
+        .container{
+            align-items: center;
+            text-align: center;
+           font-family: inter, Arial, Helvetica, sans-serif;
+           font-size: 30px;
+           color:rgb(68, 65, 65);
+          
+        }
+        button {
+background-color: #a34caf; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 38px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+        }
+h1{
+text-align: center; 
+font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-size: 50px;
+}
+
+       
+    </style>
+</head>
+<body>
+<br><br><br>
+    <h1>VAMOS SORTEAR UM NOME:</h1>
+    
+
+
+  <div class="container">
+<button  onclick="setTimeout(sortear,3000)" >Sortear</button>
+<h4>O GANHADOR OU A GANHADORA  É </h4>
+<h1 id="d" ></h1>
+</div>  
+<script>
+ 
+
+
+    let nomes = ["Adilson", "Patricia", "Katia", "Adson", "Iara", "Eliomar","Leo","André","Ricardo","Renato"]
+
+
+   
+     function sortear (){
+       
+        let np = nomes.length
+
+
+        let ns =  Math.floor( Math.random() * np) 
+        document.getElementById ('d').innerHTML = nomes [ns]
+
+      
+    }
+
+</script>
+
+</body>
+</html>
